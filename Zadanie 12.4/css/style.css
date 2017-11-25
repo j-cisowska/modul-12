@@ -1,0 +1,51 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+}
+
+
+.board {
+  text-align: center;
+  margin: 10px;
+}
+
+.column {
+  padding: 50px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.column-title {
+  margin-bottom: 20px;
+}
+
+.column-card-list {
+  border: 2px dashed black;
+}
+
+[class*="btn-delete"] {
+  margin: 4px;
+	cursor: pointer;
+  text-align: center;
+}
+
+.card {
+  margin: 10px;
+}
+
+.card p {
+  padding: 10px;
+}
+
+ li {
+  list-style-type: square;
+}
+
+.card-placeholder {
+  background-color: #7FFFD4;
+}
