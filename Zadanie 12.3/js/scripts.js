@@ -9,9 +9,19 @@ var countriesList = $('#countries');
   	var countryName = $('#country-name').val();
     if(!countryName.length) countryName = 'Poland';
     
+	function getCountry() {
+  var xhr = new XMLHttpRequest();
+  xhr.open ('GET', url);
+  xhr.addEventListener('load', function(){
+    var response = JSON.parse(xhr.response);
+    paragraph.innerHTML = response.value.joke;
+    
+  });
+  xhr.send();
+}
     
     $.ajax({
-		GET: 'https://restcountries.eu/rest/v2/name/', //???
+		//GET: 'https://restcountries.eu/rest/v2/name/', //???
   		url: url + countryName,
   		method: 'GET',
   		success: showCountriesList
@@ -32,4 +42,4 @@ var countriesList = $('#countries');
  
 });
 
-//https://codepen.io/anon/pen/rYKJar
+//https://codepen.io/anon/pen/yPRedO
