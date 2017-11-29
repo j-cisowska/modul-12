@@ -9,16 +9,10 @@ var countriesList = $('#countries');
   	var countryName = $('#country-name').val();
     if(!countryName.length) countryName = 'Poland';
     
-	function getCountry() {
+	/* ????? function getCountry() {
   var xhr = new XMLHttpRequest();
   xhr.open ('GET', url);
-  xhr.addEventListener('load', function(){
-    var response = JSON.parse(xhr.response);
-    paragraph.innerHTML = response.value.joke;
-    
-  });
-  xhr.send();
-}
+  */
     
     $.ajax({
 		//GET: 'https://restcountries.eu/rest/v2/name/', //???
