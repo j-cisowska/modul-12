@@ -9,13 +9,8 @@ var countriesList = $('#countries');
   	var countryName = $('#country-name').val();
     if(!countryName.length) countryName = 'Poland';
     
-	/* ????? function getCountry() {
-  var xhr = new XMLHttpRequest();
-  xhr.open ('GET', url);
-  */
     
     $.ajax({
-		//GET: 'https://restcountries.eu/rest/v2/name/', //???
   		url: url + countryName,
   		method: 'GET',
   		success: showCountriesList
@@ -31,8 +26,7 @@ var countriesList = $('#countries');
   
 	
   }
-  
-  
+   
  
 });
 

@@ -1,5 +1,4 @@
   //KOLUMNA
-
   
   function Column(id, name) {
     var self = this; 
@@ -66,64 +65,10 @@
       url: baseUrl + '/column/' + self.id,
       method: 'DELETE',
       success: function(response){
-        self.removeColumn(Column); //self.element.remove();
+        self.$element.remove();
       }
     });
    }
 }; 
   
   
-  
-  
-
- /*
- function Column(name) {
-    var self = this; 
-
-    this.id = randomString();
-    this.name = name;
-    this.$element = createColumn();
-
-    function createColumn() {
-    	// tworzenie kolumn
-      var $column = $('<div>').addClass('column');
-      var $columnTitle = $('<h2>').addClass('column-title').text(self.name);
-      var $columnCardList = $('<ul>').addClass('column-card-list');
-      var $columnDelete = $('<button>').addClass('btn-delete').addClass('btn btn-danger').text('x');
-      var $columnAddCard = $('<button>').addClass('add-card').addClass('btn btn-success').text('Add a card');
-   
-      // nasłuchiwacze
-	  
-	  //usunięcie kolumny
-    $columnDelete.click(function() {
-        self.removeColumn();
-    });
-	//dodanie karty w kolumnie
-    $columnAddCard.click(function(event) {
-        self.addCard(new Card(prompt("Enter the name of the card")));
-    });
-      
-    // połączenie w jedno
-      $column.append($columnTitle)
-        .append($columnDelete)
-        .append($columnAddCard)
-        .append($columnCardList);
-
-      // zwróć stworzoną kolumnę
-      return $column;
-      
-      
-    }
-   
-  }
-  
-    //dodanie karty w liście i połączenie
-    Column.prototype = {
-    addCard: function(card) {
-      this.$element.children('ul').append(card.$element);
-    },
-	//usunięcie kolumny
-    removeColumn: function() {
-      this.$element.remove();
-    }
-}; */
